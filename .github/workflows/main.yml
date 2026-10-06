@@ -1,0 +1,21 @@
+name: Run python file
+
+on:
+   push:
+       branches: - master
+
+jobs:
+   run-python:
+         runs-on: ubuntu-latest
+
+         steps:
+         - name: checkout repository
+           uses: actions/checkout@v4
+
+           -name: setup python
+           uses: action/setup-python@v5
+           with: 
+              python-version: "3.12"
+
+          - name: Run python file
+            run : python.py
