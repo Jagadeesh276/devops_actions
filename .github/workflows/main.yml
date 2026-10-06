@@ -2,7 +2,7 @@ name: Run python file
 
 on:
    push:
-       branches: - master
+       branches: -master
 
 jobs:
    run-python:
@@ -18,4 +18,4 @@ jobs:
               python-version: "3.12"
 
           - name: Run python file
-            run : python.py
+            run : Python.py
